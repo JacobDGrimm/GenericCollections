@@ -15,6 +15,9 @@ namespace GenericCollections
 
             LinkedExample(arr);
 
+            string[] newarr = new string[] { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            QueueExample(newarr);
+
             Console.ReadLine();
         }
 
@@ -51,6 +54,23 @@ namespace GenericCollections
             foreach (var item in linkExample)
             {
                 Console.WriteLine(item);
+            }
+        }
+
+        static void QueueExample(string[] arr)
+        {
+            Queue<string> queueExample = new Queue<string>();
+
+            foreach (var item in arr)
+            {
+                queueExample.Enqueue(item);
+            }
+
+            Console.WriteLine("Queue time!");
+
+            foreach (var item in queueExample)
+            {
+                Console.Write(item + " ");
             }
         }
     }
