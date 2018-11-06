@@ -24,6 +24,8 @@ namespace GenericCollections
 
             SortedExample();
 
+            HashTime(arr);
+
             Console.ReadLine();
         }
 
@@ -135,6 +137,41 @@ namespace GenericCollections
             {
                 Console.WriteLine(sorted[i]);
             }
+        }
+
+        static void HashTime(int[] arr)
+        {
+            HashSet<int> evenHash = new HashSet<int>();
+            HashSet<int> oddHash = new HashSet<int>();
+
+            foreach (var item in arr)
+            {
+                if (item % 2 != 0)
+                {
+                    oddHash.Add(item);
+                }
+                else
+                {
+                    evenHash.Add(item);
+                }
+            }
+
+            Console.WriteLine("\n\nThis is a hash set which seems to me pretty pointless...");
+
+            Console.WriteLine("even hash");
+
+            foreach (var item in evenHash)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("odd");
+
+            foreach (var item in oddHash)
+            {
+                Console.WriteLine(item);
+            }
+            
         }
     }
 
