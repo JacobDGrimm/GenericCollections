@@ -22,6 +22,8 @@ namespace GenericCollections
 
             DictionaryExample();
 
+            SortedExample();
+
             Console.ReadLine();
         }
 
@@ -114,6 +116,24 @@ namespace GenericCollections
             foreach (var sound in animalSounds)
             {
                 Console.WriteLine(sound);
+            }
+        }
+
+        static void SortedExample()
+        {
+            SortedList<int, string> sorted = new SortedList<int, string>();
+
+            sorted.Add(3, "third");
+            sorted.Add(5, "fifth");
+            sorted.Add(1, "first");
+            sorted.Add(2, "second");
+            sorted.Add(4, "fourth");
+
+            Console.WriteLine("\n\nThis is the sorted list");
+
+            for (int i = 1; i <= sorted.Count; i++)
+            {
+                Console.WriteLine(sorted[i]);
             }
         }
     }
