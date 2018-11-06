@@ -20,6 +20,8 @@ namespace GenericCollections
 
             StackExample(newarr);
 
+            DictionaryExample();
+
             Console.ReadLine();
         }
 
@@ -94,6 +96,24 @@ namespace GenericCollections
             foreach (var item in stackExample)
             {
                 Console.Write(item + " ");
+            }
+        }
+
+        static void DictionaryExample()
+        {
+            Dictionary<string, string> animalSounds = new Dictionary<string, string>();
+
+            animalSounds.Add("bark", "dog");
+            animalSounds.Add("meow", "cat");
+            animalSounds.Add("moo", "cow");
+            animalSounds.Add("bray", "donkey");
+            animalSounds.Add("wickitwickitwickitwickow", "fox");
+
+            Console.WriteLine("\n\nThis is an animal noise dictionary");
+
+            foreach (var sound in animalSounds)
+            {
+                Console.WriteLine(sound);
             }
         }
     }
