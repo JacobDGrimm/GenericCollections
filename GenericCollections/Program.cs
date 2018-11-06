@@ -18,6 +18,8 @@ namespace GenericCollections
             string[] newarr = new string[] { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
             QueueExample(newarr);
 
+            StackExample(newarr);
+
             Console.ReadLine();
         }
 
@@ -30,7 +32,7 @@ namespace GenericCollections
                 example.Add(i);
             }
 
-            Console.WriteLine("Check out this list I made");
+            Console.WriteLine("\nCheck out this list I made");
             
             foreach (var num in example)
             {
@@ -49,7 +51,7 @@ namespace GenericCollections
                 linkExample.AddLast(i);
             }
 
-            Console.WriteLine("This one is a linked list");
+            Console.WriteLine("\nThis one is a linked list");
 
             foreach (var item in linkExample)
             {
@@ -61,14 +63,35 @@ namespace GenericCollections
         {
             Queue<string> queueExample = new Queue<string>();
 
+            queueExample.Enqueue("queue test");
+
             foreach (var item in arr)
             {
                 queueExample.Enqueue(item);
             }
 
-            Console.WriteLine("Queue time!");
+            Console.WriteLine("\nQueue time!");
 
             foreach (var item in queueExample)
+            {
+                Console.Write(item + " ");
+            }
+        }
+
+        static void StackExample(string[] arr)
+        {
+            Stack<string> stackExample = new Stack<string>();
+
+            stackExample.Push("stack test");
+
+            foreach (var item in arr)
+            {
+                stackExample.Push(item);
+            }
+
+            Console.WriteLine("\n\nThis one is a stack");
+
+            foreach (var item in stackExample)
             {
                 Console.Write(item + " ");
             }
